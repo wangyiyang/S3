@@ -52,8 +52,8 @@ func IsValidBucket(bucket string) bool {
 }
 
 //	Init method take Amazon credential. Acesskey and SecretKey
-func Init(accesskey string, secretKey string) *Client {
-	return &Client{&Auth{accesskey, secretKey, "s3-eu-west-1.amazonaws.com"}}
+func Init(accesskey string, secretKey string, hosturl string) *Client {
+	return &Client{&Auth{accesskey, secretKey, hosturl}}
 }
 
 type Client struct {
